@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Supportive care information for a selected symptom." />
+    <title>Care information | Herbal Care Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="results-page">
+    <header class="site-header wrap">
+      <a class="brand" href="index.html" aria-label="Herbal Care Guide home">
+        <span class="brand-mark" aria-hidden="true">âœ¦</span>
+        <span>Herbal Care Guide</span>
+      </a>
+      <a class="back-link" href="index.html"><span aria-hidden="true">â†</span> Search again</a>
+    </header>
+
+    <main class="wrap results-main">
+      <section class="result-intro" aria-labelledby="result-heading">
+        <p class="eyebrow">Supportive care information</p>
+        <h1 id="result-heading">Results for <span id="symptom-name">your symptom</span></h1>
+        <p id="result-summary"></p>
+      </section>
+
+      <div id="no-result" class="no-result" hidden>
+        <span class="empty-icon" aria-hidden="true">âŒ•</span>
+        <h2>We couldnâ€™t find that symptom.</h2>
+        <p>Try one of the symptoms listed on the home page, or consult a healthcare professional for personalised guidance.</p>
+        <a class="button-link" href="index.html">Browse symptoms</a>
+      </div>
+
+      <div id="result-content" hidden>
+        <section class="matches-section" aria-labelledby="matches-heading">
+          <div class="matches-heading">
+            <div>
+              <p class="eyebrow">Search matches</p>
+              <h2 id="matches-heading">Related guide entries</h2>
+            </div>
+            <span id="match-count" class="match-count"></span>
+          </div>
+          <p class="matches-note">
+            A symptom may be associated with more than one health condition. These matches come
+            directly from the supplied workbook and do not mean that you have any listed condition.
+          </p>
+          <div id="condition-results" class="condition-results"></div>
+        </section>
+
+        <section class="disclaimer-card" aria-labelledby="disclaimer-heading">
+          <span class="disclaimer-icon" aria-hidden="true">!</span>
+          <div>
+            <h2 id="disclaimer-heading">Important disclaimer</h2>
+            <p>
+              This guide is for general educational information only and is not medical advice,
+              a diagnosis, or a substitute for care from a licensed health professional. It presents
+              information from the supplied workbook; it does not establish medical authority or
+              endorse any product. Herbal products vary in quality and may be unsafe for some
+              people or interact with medicines. Consult a doctor, pharmacist, or qualified
+              practitioner before using an herbal remedy. If you think you may have a medical
+              emergency, contact your local emergency service immediately.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer wrap">
+      <span>Herbal Care Guide</span>
+      <span>For educational purposes only Â· Not medical advice</span>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
