@@ -90,8 +90,19 @@
     const resultContent = document.getElementById("result-content");
     const noResult = document.getElementById("no-result");
 
-    if (!matches.length) {
+    if (!symptom) {
       name.textContent = "your symptom";
+      noResult.hidden = false;
+      return;
+    }
+
+    if (!matches.length) {
+      name.textContent = symptom.name;
+      document.getElementById("result-summary").textContent =
+        "This symptom is listed in the guide, but its related detail entry is temporarily unavailable.";
+      noResult.querySelector("h2").textContent = "Details are being refreshed.";
+      noResult.querySelector("p").textContent =
+        "Please consult a qualified healthcare professional for personalised guidance. This guide is not a diagnosis tool.";
       noResult.hidden = false;
       return;
     }
